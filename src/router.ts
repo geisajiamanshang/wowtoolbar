@@ -31,6 +31,11 @@ const router = createRouter({
       name: 'about',
       component: () => import('./pages/About.vue'),
     },
+    {
+      path: '/support',
+      name: 'support',
+      component: () => import('./pages/Support.page.vue'),
+    },
     ...toolsRoutes,
     ...toolsRedirectRoutes,
     ...(config.app.env === 'development' ? demoRoutes : []),
