@@ -1,5 +1,5 @@
 export interface SupportTier {
-  amount: number;
+  amount: string;
   label: string;
   description: string;
   url?: string;
@@ -13,24 +13,26 @@ export interface AffiliatePartner {
 
 export const supportTiers: SupportTier[] = [
   {
-    amount: 3,
+    amount: import.meta.env.VITE_SUPPORT_AMOUNT_1 || '20',
     label: 'Coffee',
     description: 'A small boost for the next useful tool.',
-    url: import.meta.env.VITE_SUPPORT_URL_3,
+    url: import.meta.env.VITE_SUPPORT_URL_1,
   },
   {
-    amount: 10,
+    amount: import.meta.env.VITE_SUPPORT_AMOUNT_2 || '68',
     label: 'Build fuel',
     description: 'Help fund maintenance and new utilities.',
-    url: import.meta.env.VITE_SUPPORT_URL_10,
+    url: import.meta.env.VITE_SUPPORT_URL_2,
   },
   {
-    amount: 25,
+    amount: import.meta.env.VITE_SUPPORT_AMOUNT_3 || '168',
     label: 'Studio backer',
     description: 'Keep WowToolbar fast, private, and independent.',
-    url: import.meta.env.VITE_SUPPORT_URL_25,
+    url: import.meta.env.VITE_SUPPORT_URL_3,
   },
 ];
+
+export const supportCurrency = import.meta.env.VITE_SUPPORT_CURRENCY || '¥';
 
 export const enterpriseSponsorUrl = import.meta.env.VITE_ENTERPRISE_SPONSOR_URL;
 

@@ -121,7 +121,7 @@ WowToolbar includes an optional `/support` page without publishing personal acco
 cp .env.example .env
 ```
 
-Empty entries remain hidden or unavailable, so the site never displays a broken payment link. The three one-time support links correspond to the `$3`, `$10`, and `$25` tiers. Rebuild the application after changing these values because Vite embeds them at build time.
+Empty entries remain hidden or unavailable, so the site never displays a broken payment link. The default mainland China tiers are `¥20`, `¥68`, and `¥168`; both currency and amounts can be changed in `.env`. Rebuild the application after changing these values because Vite embeds them at build time.
 
 ## Contributors
 

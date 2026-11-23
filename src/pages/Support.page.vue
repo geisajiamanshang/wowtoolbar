@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { IconArrowUpRight, IconBuildingStore, IconHeart, IconSparkles } from '@tabler/icons-vue';
 import { useHead } from '@vueuse/head';
-import { affiliatePartners, enterpriseSponsorUrl, supportTiers } from '@/config/support';
+import { affiliatePartners, enterpriseSponsorUrl, supportCurrency, supportTiers } from '@/config/support';
 
 useHead({
   title: 'Support WowToolbar',
@@ -37,7 +37,7 @@ const hasSupportLinks = supportTiers.some(tier => tier.url);
 
       <div class="tier-grid">
         <article v-for="tier in supportTiers" :key="tier.amount" class="support-card">
-          <div class="amount">${{ tier.amount }}</div>
+          <div class="amount">{{ supportCurrency }}{{ tier.amount }}</div>
           <h3>{{ tier.label }}</h3>
           <p>{{ tier.description }}</p>
           <a
