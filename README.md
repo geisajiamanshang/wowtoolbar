@@ -113,6 +113,16 @@ pnpm run script:create:tool my-tool-name
 
 It will create a directory in `src/tools` with the correct files, and a the import in `src/tools/index.ts`. You will just need to add the imported tool in the proper category and develop the tool.
 
+### Configure brand support links
+
+WowToolbar includes an optional `/support` page without publishing personal account details. Copy `.env.example` to `.env`, then add brand-owned hosted checkout, sponsor contact, or affiliate URLs.
+
+```sh
+cp .env.example .env
+```
+
+Empty entries remain hidden or unavailable, so the site never displays a broken payment link. The default mainland China tiers are `¥20`, `¥68`, and `¥168`; both currency and amounts can be changed in `.env`. Rebuild the application after changing these values because Vite embeds them at build time.
+
 ## Contributors
 
 Big thanks to all the people who have already contributed!
