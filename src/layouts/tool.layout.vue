@@ -21,6 +21,12 @@ const head = computed<HeadObject>(() => ({
       content: ((route.meta.keywords ?? []) as string[]).join(','),
     },
   ],
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://wowtoolbar.com${route.path}`,
+    },
+  ],
 }));
 useHead(head);
 const { t } = useI18n();

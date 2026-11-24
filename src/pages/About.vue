@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { useHead } from '@vueuse/head';
 
-useHead({ title: 'About - WowToolbar' });
+useHead({
+  title: 'About - WowToolbar',
+  meta: [{ name: 'description', content: 'Learn how WowToolbar builds fast, privacy-friendly browser utilities.' }],
+  link: [{ rel: 'canonical', href: 'https://wowtoolbar.com/about' }],
+});
 
 const aboutContent = `# About WowToolbar
 
@@ -13,7 +17,15 @@ Tools run in your browser whenever possible. Content entered into a tool is not 
 
 ## Simple and reliable
 
-The interface is designed to stay quick, distraction-free, and useful across desktop and mobile devices.`;
+The interface is designed to stay quick, distraction-free, and useful across desktop and mobile devices.
+
+## What you can do
+
+WowToolbar includes focused utilities for encoding, cryptography, data conversion, text processing, web development, networking, measurements, and everyday productivity. Each tool has a direct URL so it can be bookmarked and shared.
+
+## Independent and transparent
+
+WowToolbar is maintained as an independent project. Optional support and affiliate relationships are clearly identified, and they never change the output of a tool.`;
 </script>
 
 <template>

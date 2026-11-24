@@ -11,6 +11,7 @@ useHead({
       content: 'Support the continued development and maintenance of WowToolbar.',
     },
   ],
+  link: [{ rel: 'canonical', href: 'https://wowtoolbar.com/support' }],
 });
 
 const hasSupportLinks = supportTiers.some(tier => tier.url);

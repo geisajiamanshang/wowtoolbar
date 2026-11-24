@@ -11,6 +11,7 @@ import { useStyleStore } from '@/stores/style.store';
 import type { ToolCategory } from '@/tools/tools.types';
 import { useToolStore } from '@/tools/tools.store';
 import CollapsibleToolMenu from '@/components/CollapsibleToolMenu.vue';
+import SiteFooter from '@/components/SiteFooter.vue';
 
 const styleStore = useStyleStore();
 
@@ -79,6 +80,7 @@ const tools = computed<ToolCategory[]>(() => [
         </div>
       </div>
       <slot />
+      <SiteFooter />
     </template>
   </MenuLayout>
 </template>

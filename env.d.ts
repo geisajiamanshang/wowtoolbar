@@ -16,6 +16,7 @@ interface ImportMetaEnv {
   VITE_AFFILIATE_DOMAIN_URL?: string;
   VITE_AFFILIATE_API_URL?: string;
   VITE_AFFILIATE_SECURITY_URL?: string;
+  VITE_CONTACT_EMAIL?: string;
   PACKAGE_VERSION: string;
   GIT_SHORT_SHA: string;
   PROD: boolean;

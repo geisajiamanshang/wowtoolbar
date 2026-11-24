@@ -8,7 +8,16 @@ import { useToolStore } from '@/tools/tools.store';
 
 const toolStore = useToolStore();
 
-useHead({ title: 'WowToolbar - Free Online Tools' });
+useHead({
+  title: 'WowToolbar - Free Online Tools',
+  meta: [
+    {
+      name: 'description',
+      content: 'Fast, private online utilities for developers, data conversion, text processing, networking, and everyday tasks.',
+    },
+  ],
+  link: [{ rel: 'canonical', href: 'https://wowtoolbar.com/' }],
+});
 const { t } = useI18n();
 
 const favoriteTools = computed(() => toolStore.favoriteTools);
